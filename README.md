@@ -1,6 +1,6 @@
 # wordpress-app
 
-Containerized WordPress build that complements the `wordpress-iac` infrastructure repo. The image uses the official `wordpress:php8.2-apache` base, adds a health probe, and renders `wp-config.php` from SSM-provided environment variables so EC2 Auto Scaling instances stay stateless (no shared FS/EFS needed).
+Containerized WordPress build that complements the `wordpress-iac` infrastructure repo. The image uses the official `wordpress:php8.2-apache` base, adds a health probe, and renders `wp-config.php` from SSM-provided environment variables so EC2 Auto Scaling instances stay stateless (no shared FS/EFS needed). AWS account has already been torn down.
 
 ## Runtime expectations
 - Required environment variables: `WORDPRESS_DB_HOST`, `WORDPRESS_DB_NAME`, `WORDPRESS_DB_USER`, `WORDPRESS_DB_PASSWORD`, `WP_HOME`, `WP_SITEURL`, and the WordPress salts (`WP_AUTH_KEY`, etc.).
