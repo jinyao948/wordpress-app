@@ -17,6 +17,7 @@ permissions:
 jobs:
   security-scan:
     runs-on: ubuntu-latest
+    # Bonus requirement: fail fast on HIGH/CRITICAL findings before building the image.
     steps:
       - name: Checkout
         uses: actions/checkout@v4
